@@ -4,9 +4,11 @@ import java.util.Stack;
 import java.awt.Point;
 
 public class Evaluation {
+	
 	private static boolean isMember(ArrayList<Point> points, Point p){
 		for (Point point:points) if (point.equals(p)) return true; return false;
 	}
+	
 	public static boolean isValide(ArrayList<Point> origPoints, ArrayList<Point> fvs){
 		ArrayList<Point> vertices = new ArrayList<Point>();
 		for (Point p:origPoints) if (!isMember(fvs,p)) vertices.add((Point)p.clone());
