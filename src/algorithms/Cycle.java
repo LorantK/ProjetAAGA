@@ -24,7 +24,8 @@ public class Cycle {
 
 	/**
 	 * Renvoie s'il existe un cycle semi-disjoint des points du graphe. S'il n'y a pas de cycle, renvoie null
-	 * @return
+	 * @return la liste des points formant un cycle semi-disjoint
+	 * 
 	 */
 	public ArrayList<PointDeg> calculSdCycle(){
 		ArrayList<PointDeg> res = new ArrayList<PointDeg>();
@@ -42,7 +43,7 @@ public class Cycle {
 	 * @param prev Point precedemmment parcouru
 	 * @param current
 	 * @param chemin ArrayList utilise pour stocker les points pendant la recursion
-	 * @return
+	 * @return 
 	 */
 	public ArrayList<PointDeg> calculSDCycle_rec(PointDeg prev, PointDeg current, ArrayList<PointDeg> chemin){
 		marked.replace(current, true); // On marque le point current
